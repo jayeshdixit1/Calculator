@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
@@ -14,50 +14,53 @@
 <div class="container">
     <div class="calculator">
 
-        <div class="brand-row">
-            <span class="screw" aria-hidden="true"></span>
-            <span class="brand">ELECTRO&nbsp;100</span>
-            <span class="screw" aria-hidden="true"></span>
-        </div>
-
         <div class="display-panel">
-            <span class="power-dot" aria-hidden="true"></span>
-            <input type="text" placeholder="0" id="inputBox" readonly>
+            <div class="trace" id="trace">&nbsp;</div>
+            <input type="text" placeholder="0" id="inputBox" readonly aria-label="Calculator display">
         </div>
 
-        <div>
-            <button class="operator" data-action="clear">AC</button>
-            <button data-value="7">7</button>
-            <button data-value="4">4</button>
-            <button data-value="1">1</button>
-            <button class="operator" data-value=".">.</button>
+        <div class="keys keys-fn">
+            <button class="fn" data-insert="sin(">sin</button>
+            <button class="fn" data-insert="cos(">cos</button>
+            <button class="fn" data-insert="tan(">tan</button>
+            <button class="fn" data-insert="√(">√</button>
+            <button class="fn" data-insert="^">xʸ</button>
+            <button class="fn" data-insert="ln(">ln</button>
+            <button class="fn" data-insert="log(">log</button>
+            <button class="fn" data-insert="π">π</button>
+            <button class="fn" data-insert="e">e</button>
+            <button class="fn" data-insert="1/(">1/x</button>
         </div>
-        <div>
-            <button class="operator" data-action="delete">DEL</button>
-            <button data-value="8">8</button>
-            <button data-value="5">5</button>
-            <button data-value="2">2</button>
-            <button data-value="0">0</button>
-        </div>
-        <div>
-            <button class="operator" data-value="%">%</button>
-            <button data-value="9">9</button>
-            <button data-value="6">6</button>
-            <button data-value="3">3</button>
-            <button data-value="00">00</button>
-        </div>
-        <div>
-            <button class="operator" data-value="/">/</button>
-            <button class="operator" data-value="*">*</button>
-            <button class="operator" data-value="-">-</button>
-            <button class="operator" data-value="+">+</button>
+
+        <div class="keys keys-main">
+            <button class="util" data-action="clear">AC</button>
+            <button class="util" data-insert="(">(</button>
+            <button class="util" data-insert=")">)</button>
+            <button class="op" data-insert="%">%</button>
+
+            <button class="digit" data-insert="7">7</button>
+            <button class="digit" data-insert="8">8</button>
+            <button class="digit" data-insert="9">9</button>
+            <button class="op" data-insert="/">÷</button>
+
+            <button class="digit" data-insert="4">4</button>
+            <button class="digit" data-insert="5">5</button>
+            <button class="digit" data-insert="6">6</button>
+            <button class="op" data-insert="*">×</button>
+
+            <button class="digit" data-insert="1">1</button>
+            <button class="digit" data-insert="2">2</button>
+            <button class="digit" data-insert="3">3</button>
+            <button class="op" data-insert="-">−</button>
+
+            <button class="util" data-action="delete">DEL</button>
+            <button class="digit" data-insert="0">0</button>
+            <button class="digit" data-insert=".">.</button>
+            <button class="op" data-insert="+">+</button>
+
             <button class="equal" data-action="equals">=</button>
         </div>
 
-        <div class="screw-row">
-            <span class="screw" aria-hidden="true"></span>
-            <span class="screw" aria-hidden="true"></span>
-        </div>
     </div>
 </div>
 <script src="script.js"></script>
